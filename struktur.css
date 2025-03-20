@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+.Otuk1{
+    position: relative;
+    top: -160px;
+    left: -7px;
+}
+.Otuk2{
+    position: relative;
+    top: -160px;
+    left: 390px;
+}
+.Otuk3{
+    position: relative;
+    right: 120px;
+    justify-content: center;
+}
+.Otuk{
+    position: relative;
+    right: 120px;
+}
+/* Struktur Pohon */
+.tree { position: relative;
+    top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styling UL untuk tampilan pohon */
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Styling LI untuk setiap elemen */
+.tree li {
+    list-style-type: none;
+    position: relative;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Garis vertikal dan horizontal */
+.tree li::before, 
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    left: auto;
+    right: 50%;
+}
+
+/* Hilangkan garis jika hanya satu elemen */
+.tree li:only-child::after, 
+.tree li:only-child::before {
+    display: none;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0;
+}
+
+/* Kotak untuk setiap posisi */
+.tree .box {
+    background: white;
+    padding: 10px;
+    border: 2px solid #ddd;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    position: relative;
+    text-align: center;
+}
+
+/* Styling Foto */
+.tree .box img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 5px;
+    border: 3px solid red;
+}
+
+/* Styling Nama Posisi */
+.tree .box p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Grid untuk tampilan yang lebih rapi */
+.grid-siswa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
